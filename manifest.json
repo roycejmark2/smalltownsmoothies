@@ -1,0 +1,15 @@
+{
+  "name": "Small Town Smoothies",
+  "short_name": "Smoothies",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fffaf6",
+  "theme_color": "#f96167",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
