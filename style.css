@@ -53,3 +53,27 @@ a {
 a:hover {
   background: #e84c55;
 }
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.brand-heading {
+  font-family: 'Chewy', cursive;
+  font-size: 2.2em;
+  color: #f96167;
+  text-align: center;
+  margin: 0;
+}
+
+.brand-tagline {
+  font-family: 'Chewy', cursive;
+  font-size: 1.3em;
+  text-align: center;
+  color: #555;
+  margin-bottom: 30px;
+}
