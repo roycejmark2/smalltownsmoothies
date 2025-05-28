@@ -4,15 +4,25 @@ body {
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
   background: #fffaf6;
   color: #333;
-  padding: 30px;
   margin: 0;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 15px;
+}
+
+.container {
+  width: 320px; /* Slightly wider than logo for breathing room */
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
   display: block;
-  margin: 0 auto;
-  width: 300px; /* Adjust this to make logo bigger or smaller */
+  width: 300px;
   margin-bottom: 10px;
 }
 
@@ -37,8 +47,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 0;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   max-width: 1000px;
 }
 
