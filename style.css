@@ -12,7 +12,7 @@ body {
 .logo {
   display: block;
   margin: 0 auto;
-  width: 600px;
+  width: 300px; /* Adjust this to make logo bigger or smaller */
   margin-bottom: 10px;
 }
 
@@ -64,14 +64,16 @@ body {
 }
 
 .tile h2 {
+  font-family: 'Chewy', cursive;
   margin: 10px 0 5px;
   font-size: 1.1em;
   color: #f96167;
 }
 
 .tile p {
+  font-family: 'Chewy', cursive;
+  font-size: 1.2em;
   margin: 0;
-  font-weight: bold;
   color: #333;
 }
 
