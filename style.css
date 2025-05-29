@@ -1,148 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Small Town Smoothies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 
-body {
-  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-  background: #fffaf6;
-  color: #333;
-  margin: 0;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 15px;
-}
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      background: #fdf5ec;
+      color: #333;
+      margin: 0;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 15px;
+    }
 
-/* Animation: fade-in zoom for container */
-@keyframes fadeZoom {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
-}
+    .container {
+      width: 320px;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeZoom 1s ease-in-out;
+    }
 
-.container {
-  width: 320px;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: fadeZoom 1s ease-in-out;
-}
+    @keyframes fadeZoom {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
 
-.logo {
-  display: block;
-  width: 300px;
-  margin-bottom: 10px;
-}
+    .logo {
+      display: block;
+      width: 300px;
+      margin-bottom: 10px;
+    }
 
-.brand-heading {
-  font-family: 'Chewy', cursive;
-  font-size: 2.2em;
-  color: #f96167;
-  text-align: center;
-  margin: 0;
-  animation: fadeInUp 1.2s ease-in-out;
-}
+    .brand-heading {
+      font-family: 'Chewy', cursive;
+      font-size: 2.2em;
+      color: #f35c5b;
+      text-align: center;
+      margin: 0;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
 
-.brand-tagline {
-  font-family: 'Chewy', cursive;
-  font-size: 1.3em;
-  text-align: center;
-  color: #555;
-  margin-bottom: 30px;
-  animation: fadeInUp 1.4s ease-in-out;
-}
+    .brand-tagline {
+      font-family: 'Chewy', cursive;
+      font-size: 1.3em;
+      text-align: center;
+      color: #555;
+      margin-bottom: 30px;
+      animation: fadeInUp 1.4s ease-in-out;
+    }
 
-/* Animation: tile slide-up */
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    #menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 0 auto 30px;
+      max-width: 1000px;
+    }
 
-#menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin: 0 auto 30px;
-  max-width: 1000px;
-}
+    .tile {
+      background: #f9b233;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 240px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s ease;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 0.6s ease-in-out forwards;
+    }
 
-.tile {
-  background: #fce77d;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 240px;
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.2s ease;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideUp 0.6s forwards;
-}
+    .tile:nth-child(1) { animation-delay: 0.2s; }
+    .tile:nth-child(2) { animation-delay: 0.4s; }
+    .tile:nth-child(3) { animation-delay: 0.6s; }
+    .tile:nth-child(4) { animation-delay: 0.8s; }
+    .tile:nth-child(5) { animation-delay: 1.0s; }
 
-/* Stagger animation delay */
-.tile:nth-child(1) { animation-delay: 0.2s; }
-.tile:nth-child(2) { animation-delay: 0.4s; }
-.tile:nth-child(3) { animation-delay: 0.6s; }
-.tile:nth-child(4) { animation-delay: 0.8s; }
-.tile:nth-child(5) { animation-delay: 1.0s; }
-
-.tile:hover {
-  transform: scale(1.03);
-}
-
-.tile img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.tile h2 {
-  font-family: 'Chewy', cursive;
-  margin: 10px 0 5px;
-  font-size: 1.1em;
-  color: #f96167;
-}
-
-.tile p {
-  font-family: 'Chewy', cursive;
-  font-size: 1.2em;
-  margin: 0;
-  color: #333;
-}
-
-a {
-  background: #f96167;
-  color: white;
-  padding: 12px 20px;
-  text-decoration: none;
-  border-radius: 6px;
-  display: inline-block;
-  font-weight: bold;
-  font-size: 1.1em;
-  transition: background 0.3s ease;
-  text-align: center;
-  animation: pulse 2.5s infinite;
-}
-
-a:hover {
-  background: #e84c55;
-}
-
-/* Animation: button pulse */
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-
-/* Animation: generic fadeInUp */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    @keyframes slideUp {
