@@ -6,8 +6,6 @@
   <title>Small Town Smoothies</title>
   <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
-
     body {
       font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
       background: #fdf5ec;
@@ -56,6 +54,11 @@
       color: #555;
       margin-bottom: 30px;
       animation: fadeInUp 1.4s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     #menu {
@@ -113,7 +116,7 @@
 
     .tile p {
       font-family: 'Chewy', cursive;
-      font-size: 1.2em;
+      font-size: 1.1em;
       margin: 0;
       color: #333;
     }
@@ -140,20 +143,10 @@
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.05); }
     }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
   </style>
 </head>
 <body>
+
   <div class="container">
     <img src="icon.png" alt="Small Town Smoothies Logo" class="logo">
     <h1 class="brand-heading">
@@ -164,19 +157,18 @@
   </div>
 
   <div id="menu">
-    <!-- Example tile -->
     <div class="tile">
       <img src="blueberry-bliss.png" alt="Blueberry Bliss">
       <h2>Blueberry Bliss</h2>
       <p>$8</p>
-      <p class="ingredients">Blueberries, Banana, Greek Yogurt, Almond Milk, Honey, Ice</p>
+      <p>Blueberries, Banana, Vanilla Greek Yogurt, Almond Milk, Honey, Ice</p>
     </div>
-  </div>
-
-  <p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSff2kxbG5_FmF2nYXx9Ksne2tukXQ6Ix_Gyeep0ejNs6Hgq6A/viewform?usp=header" target="_blank">
-      Place Order
-    </a>
-  </p>
-</body>
-</html>
+    <div class="tile">
+      <img src="strawberry-banana.png" alt="Strawberry Banana Classic">
+      <h2>Strawberry Banana Classic</h2>
+      <p>$8</p>
+      <p>Strawberries, Banana, Low-fat Yogurt, Orange Juice, Milk, Ice</p>
+    </div>
+    <div class="tile">
+      <img src="pineapple-mango.png" alt="Pineapple Mango Tropical">
+      <h2>Pineapp
