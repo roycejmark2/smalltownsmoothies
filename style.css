@@ -87,3 +87,96 @@
     .tile:nth-child(5) { animation-delay: 1.0s; }
 
     @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .tile:hover {
+      transform: scale(1.03);
+    }
+
+    .tile img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .tile h2 {
+      font-family: 'Chewy', cursive;
+      margin: 10px 0 5px;
+      font-size: 1.1em;
+      color: #f35c5b;
+    }
+
+    .tile p {
+      font-family: 'Chewy', cursive;
+      font-size: 1.2em;
+      margin: 0;
+      color: #333;
+    }
+
+    a {
+      background: #f35c5b;
+      color: #ffffff;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      display: inline-block;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: background 0.3s ease;
+      text-align: center;
+      animation: pulse 2.5s infinite;
+    }
+
+    a:hover {
+      background: #00a3ad;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="icon.png" alt="Small Town Smoothies Logo" class="logo">
+    <h1 class="brand-heading">
+      🍓 Welcome!<br>
+      <span class="subheading">Order Your Favorite Small Town Smoothie</span>
+    </h1>
+    <p class="brand-tagline">All Natural Smoothies</p>
+  </div>
+
+  <div id="menu">
+    <!-- Example tile -->
+    <div class="tile">
+      <img src="blueberry-bliss.png" alt="Blueberry Bliss">
+      <h2>Blueberry Bliss</h2>
+      <p>$8</p>
+      <p class="ingredients">Blueberries, Banana, Greek Yogurt, Almond Milk, Honey, Ice</p>
+    </div>
+  </div>
+
+  <p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSff2kxbG5_FmF2nYXx9Ksne2tukXQ6Ix_Gyeep0ejNs6Hgq6A/viewform?usp=header" target="_blank">
+      Place Order
+    </a>
+  </p>
+</body>
+</html>
