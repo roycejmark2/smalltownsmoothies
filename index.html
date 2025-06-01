@@ -6,6 +6,10 @@
   <title>Small Town Smoothies</title>
   <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Chewy', cursive;
       margin: 0;
@@ -14,31 +18,41 @@
       text-align: center;
     }
 
-    .container {
-      padding: 20px;
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      background-color: #fff8f0;
     }
 
-    .logo {
-      max-width: 300px;
-      margin-bottom: 10px;
+    .hero-logo {
+      max-width: 600px;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .hero-button {
+      font-size: 1.4rem;
+      background-color: #f96167;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-button:hover {
+      background-color: #e04e54;
     }
 
     .brand-heading {
       font-size: 2.5rem;
       margin: 0.5em 0;
-    }
-
-    .subheading {
-      font-size: 1.2rem;
-      display: block;
-      margin-bottom: 0.2em;
-    }
-
-    .subheading-bold {
-      font-size: 1.2rem;
-      display: block;
-      font-weight: bold;
-      margin-top: 0;
     }
 
     .brand-tagline {
@@ -48,11 +62,15 @@
     }
 
     #menu {
+      padding: 40px 20px;
+      background-color: #fff8f0;
+    }
+
+    .menu-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      padding: 20px;
     }
 
     .tile-link {
@@ -94,98 +112,83 @@
       color: #555;
     }
 
-    a {
+    a.order-button {
       font-size: 1.2rem;
       color: #f96167;
       font-weight: bold;
     }
 
-    a:hover {
+    a.order-button:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <img src="icon.png" alt="Small Town Smoothies Logo" class="logo">
-    <h1 class="brand-heading">
-      🍓 Welcome!<br>
-      <span class="subheading">Order Your Favorite</span>
-      <span class="subheading-bold">Small Town Smoothie</span>
-    </h1>
-    <p class="brand-tagline">Real Fruit Smoothies</p>
+  <!-- Hero Section -->
+  <div class="hero">
+    <img src="icon.png" alt="Small Town Smoothies Logo" class="hero-logo">
+    <a href="#menu" class="hero-button">🍓 View Smoothies</a>
   </div>
 
+  <!-- Menu Section -->
   <div id="menu">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSff2kxbG5_FmF2nYXx9Ksne2tukXQ6Ix_Gyeep0ejNs6Hgq6A/viewform?usp=header" target="_blank" class="tile-link">
-      <div class="tile">
-        <img src="blueberry-bliss.png" alt="Blueberry Bliss">
-        <h2>Blueberry Bliss</h2>
-        <p>$8</p>
-        <p class="ingredients">
-          Blueberries, Banana, Vanilla Greek yogurt,<br>
-          Unsweetened almond milk, Honey or simple syrup, Ice
-        </p>
-      </div>
-    </a>
+    <h1 class="brand-heading">Order Your Favorite<br><span>Small Town Smoothie</span></h1>
+    <p class="brand-tagline">Real Fruit Smoothies</p>
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSff2kxbG5_FmF2nYXx9Ksne2tukXQ6Ix_Gyeep0ejNs6Hgq6A/viewform?usp=header" target="_blank" class="tile-link">
-      <div class="tile">
-        <img src="strawberry-banana.png" alt="Strawberry Banana Classic">
-        <h2>Strawberry Banana Classic</h2>
-        <p>$8</p>
-        <p class="ingredients">
-          Strawberries, Banana, Low-fat yogurt (vanilla or plain),<br>
-          Orange juice or apple juice, Milk or almond milk, Ice
-        </p>
-      </div>
-    </a>
+    <div class="menu-container">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSff2kxbG5_FmF2nYXx9Ksne2tukXQ6Ix_Gyeep0ejNs6Hgq6A/viewform?usp=header" target="_blank" class="tile-link">
+        <div class="tile">
+          <img src="blueberry-bliss.png" alt="Blueberry Bliss">
+          <h2>Blueberry Bliss</h2>
+          <p>$8</p>
+          <p class="ingredients">Blueberries, Banana, Vanilla Greek yogurt, Unsweetened almond milk, Honey or simple syrup, Ice</p>
+        </div>
+      </a>
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSff2kxbG5_FmF2nYXx9Ksne2tukXQ6Ix_Gyeep0ejNs6Hgq6A/viewform?usp=header" target="_blank" class="tile-link">
-      <div class="tile">
-        <img src="pineapple-mango.png" alt="Pineapple Mango Tropical">
-        <h2>Pineapple Mango Tropical</h2>
-        <p>$8</p>
-        <p class="ingredients">
-          Mango chunks, Pineapple chunks, Banana,<br>
-          Coconut water or pineapple juice, Greek yogurt (optional), Ice
-        </p>
-      </div>
-    </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSff2kxbG5_FmF2nYXx9Ksne2tukXQ6Ix_Gyeep0ejNs6Hgq6A/viewform?usp=header" target="_blank" class="tile-link">
+        <div class="tile">
+          <img src="strawberry-banana.png" alt="Strawberry Banana Classic">
+          <h2>Strawberry Banana Classic</h2>
+          <p>$8</p>
+          <p class="ingredients">Strawberries, Banana, Low-fat yogurt, Orange or apple juice, Milk or almond milk, Ice</p>
+        </div>
+      </a>
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSff2kxbG5_FmF2nYXx9Ksne2tukXQ6Ix_Gyeep0ejNs6Hgq6A/viewform?usp=header" target="_blank" class="tile-link">
-      <div class="tile">
-        <img src="chocolate-peanut.png" alt="Chocolate Peanut Butter Delight">
-        <h2>Chocolate Peanut Butter Delight</h2>
-        <p>$8</p>
-        <p class="ingredients">
-          Banana, Natural peanut butter, Cocoa powder (unsweetened),<br>
-          Milk (dairy or non-dairy), Vanilla Greek yogurt,<br>
-          Honey or maple syrup (optional), Ice
-        </p>
-      </div>
-    </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSff2kxbG5_FmF2nYXx9Ksne2tukXQ6Ix_Gyeep0ejNs6Hgq6A/viewform?usp=header" target="_blank" class="tile-link">
+        <div class="tile">
+          <img src="pineapple-mango.png" alt="Pineapple Mango Tropical">
+          <h2>Pineapple Mango Tropical</h2>
+          <p>$8</p>
+          <p class="ingredients">Mango, Pineapple, Banana, Coconut water or juice, Greek yogurt (optional), Ice</p>
+        </div>
+      </a>
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSff2kxbG5_FmF2nYXx9Ksne2tukXQ6Ix_Gyeep0ejNs6Hgq6A/viewform?usp=header" target="_blank" class="tile-link">
-      <div class="tile">
-        <img src="tryagainmocha-activator.png" alt="Mocha Activator">
-        <h2>Mocha Activator</h2>
-        <p>$8</p>
-        <p class="ingredients">
-          Brewed coffee (chilled), Banana, Cocoa powder,<br>
-          Milk (dairy or plant-based), Vanilla protein powder,<br>
-          Almond butter (optional), Ice
-        </p>
-      </div>
-    </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSff2kxbG5_FmF2nYXx9Ksne2tukXQ6Ix_Gyeep0ejNs6Hgq6A/viewform?usp=header" target="_blank" class="tile-link">
+        <div class="tile">
+          <img src="chocolate-peanut.png" alt="Chocolate Peanut Butter Delight">
+          <h2>Chocolate Peanut Butter Delight</h2>
+          <p>$8</p>
+          <p class="ingredients">Banana, Natural peanut butter, Cocoa powder, Milk, Vanilla Greek yogurt, Honey or maple syrup, Ice</p>
+        </div>
+      </a>
+
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSff2kxbG5_FmF2nYXx9Ksne2tukXQ6Ix_Gyeep0ejNs6Hgq6A/viewform?usp=header" target="_blank" class="tile-link">
+        <div class="tile">
+          <img src="tryagainmocha-activator.png" alt="Mocha Activator">
+          <h2>Mocha Activator</h2>
+          <p>$8</p>
+          <p class="ingredients">Chilled coffee, Banana, Cocoa powder, Milk, Vanilla protein powder, Almond butter (optional), Ice</p>
+        </div>
+      </a>
+    </div>
+
+    <p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSff2kxbG5_FmF2nYXx9Ksne2tukXQ6Ix_Gyeep0ejNs6Hgq6A/viewform?usp=header" target="_blank" class="order-button">
+        Place Order
+      </a>
+    </p>
   </div>
-
-  <p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSff2kxbG5_FmF2nYXx9Ksne2tukXQ6Ix_Gyeep0ejNs6Hgq6A/viewform?usp=header" target="_blank">
-      Place Order
-    </a>
-  </p>
 
 </body>
 </html>
